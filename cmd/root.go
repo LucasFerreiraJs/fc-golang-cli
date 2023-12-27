@@ -13,6 +13,8 @@ import (
 	"github.com/spf13/cobra"
 )
 
+type RunEFunc func(cmd *cobra.Command, argds []string) error
+
 func GetDb() *sql.DB {
 
 	db, err := sql.Open("sqlite3", "./data.db")
